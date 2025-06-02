@@ -1,0 +1,59 @@
+@import '../_variables';
+
+.card {
+  border: 1px solid $color-gray-light;
+  border-radius: $border-radius;
+  overflow: hidden;  /* Для красивого отображения border-radius у изображения */
+  box-shadow: $box-shadow;
+  background-color: $color-white;
+  margin-bottom: $spacing-medium;
+
+  &__image {
+    width: 100%;
+    height: 200px; /* Пример высоты, настройте под себя */
+    object-fit: cover; /*  Обеспечивает правильное отображение картинки */
+  }
+
+  &__content {
+    padding: $spacing-medium;
+  }
+
+  &__title {
+    font-size: $font-size-large;
+    margin-bottom: $spacing-small;
+  }
+
+  &__text {
+    font-size: $font-size-base;
+    color: $color-gray-dark;
+  }
+
+  &--no-image {
+    .card__image {
+      display: none; /* Скрываем изображение */
+    }
+  }
+
+  &--small {
+    .card__title {
+      font-size: $font-size-medium;
+    }
+    .card__text {
+      font-size: $font-size-small;
+    }
+    margin-bottom: $spacing-small;
+  }
+
+  &--medium {
+     /*  Размеры по умолчанию */
+  }
+
+  &--large {
+    .card__title {
+      font-size: $font-size-xlarge;
+    }
+    .card__text {
+      font-size: $font-size-large;
+    }
+  }
+}

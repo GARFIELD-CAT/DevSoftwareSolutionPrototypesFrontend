@@ -1,0 +1,67 @@
+@import '../_variables';
+
+.navbar {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: $spacing-medium;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: $font-size-large;
+    font-weight: bold;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none; // Скрываем меню на мобильных устройствах
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $color-primary;
+      flex-direction: column;
+      z-index: 10; /*  Отображать поверх других элементов */
+    }
+  }
+
+  &__menu-item {
+    margin-left: $spacing-medium;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin: 0;
+      padding: $spacing-medium;
+      border-bottom: 1px solid rgba($color-white, 0.2);
+    }
+  }
+
+  &__menu-link {
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($color-white, 20%);
+    }
+  }
+
+  &__toggle {
+    display: none; /* Скрываем кнопку гамбургер по умолчанию */
+    @media (max-width: $breakpoint-mobile) {
+      display: block; /* Отображаем кнопку на мобильных устройствах */
+      cursor: pointer;
+      font-size: 2em;
+    }
+  }
+}
+
+.navbar--open {
+  .navbar__menu {
+    display: flex; /* Отображаем меню при открытии */
+  }
+}

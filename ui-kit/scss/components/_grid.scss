@@ -1,0 +1,27 @@
+@import '../_variables';
+
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: $spacing-medium;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-small; // Уменьшаем padding на мобильных
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Адаптивная сетка
+  gap: $spacing-medium; // Расстояние между элементами
+
+  &--2-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--3-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  // Другие варианты столбцов по необходимости
+}

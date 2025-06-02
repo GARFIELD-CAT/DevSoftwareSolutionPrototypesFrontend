@@ -1,0 +1,43 @@
+// Цвета
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+$color-light: #f8f9fa;
+$color-dark: #343a40;
+$color-white: #fff;
+$color-gray-light: #ccc;
+$color-gray-dark: #666;
+$color-error: #dc3545; // Пример цвета для ошибок
+$focus-color: rgba($color-primary, 0.4);
+
+// Шрифты
+$font-family: sans-serif;
+$font-size-base: 16px;
+$font-size-small: 0.875rem;
+$font-size-medium: 1rem;
+$font-size-large: 1.25rem;
+$font-size-xlarge: 1.5rem;
+
+// Отступы
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 1.5rem;
+
+// Размеры
+$border-radius: 4px;
+$container-width: 1200px;
+$button-padding-y: 0.75rem;
+$button-padding-x: 1.5rem;
+$button-padding-y-small: 0.5rem;
+$button-padding-x-small: 1rem;
+$button-padding-y-large: 1rem;
+$button-padding-x-large: 2rem;
+$input-padding-y: 0.75rem;
+$input-padding-x: 1rem;
+
+// Медиа-запросы
+$breakpoint-mobile: 768px; // Пример breakpoint
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

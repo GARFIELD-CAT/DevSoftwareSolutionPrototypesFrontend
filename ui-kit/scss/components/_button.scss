@@ -1,0 +1,79 @@
+@import '../_variables';
+
+.button {
+  display: inline-block;
+  padding: $button-padding-y $button-padding-x;
+  border: none;
+  border-radius: $border-radius;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $focus-color; // Пример фокуса
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+
+    &:active {
+      background-color: darken($color-primary, 15%);
+    }
+
+    &:disabled {
+      background-color: $color-gray-light;
+      color: $color-gray-dark;
+      cursor: not-allowed;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-white;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+
+    &:hover {
+      background-color: lighten($color-primary, 70%);
+    }
+
+    &:active {
+      background-color: lighten($color-primary, 60%);
+    }
+
+    &:disabled {
+      color: $color-gray-dark;
+      border-color: $color-gray-light;
+      cursor: not-allowed;
+    }
+  }
+
+  &--disabled {
+    background-color: $color-gray-light;
+    color: $color-gray-dark;
+    cursor: not-allowed;
+  }
+
+  &--small {
+    padding: $button-padding-y-small $button-padding-x-small;
+    font-size: $font-size-small;
+  }
+
+  &--medium {
+    padding: $button-padding-y $button-padding-x;
+    font-size: $font-size-base;
+  }
+
+  &--large {
+    padding: $button-padding-y-large $button-padding-x-large;
+    font-size: $font-size-large;
+  }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Kit Documentation</title>
+  <link rel="stylesheet" href="style.css">  <!-- Ссылка на скомпилированный CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font Awesome (если используете иконки) -->
+</head>
+<body>
+  <header>
+    <h1>UI Kit Documentation</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Кнопки</h2>
+      <p>Описание компонента кнопок и его вариантов.</p>
+      <h3>Основные варианты:</h3>
+      <button class="button button--primary">Primary</button>
+      <button class="button button--secondary">Secondary</button>
+      <button class="button button--primary button--disabled" disabled>Disabled</button>
+      <!-- ... другие примеры -->
+      <pre><code>
+        &lt;button class="button button--primary"&gt;Primary&lt;/button&gt;
+        &lt;button class="button button--secondary"&gt;Secondary&lt;/button&gt;
+        &lt;button class="button button--primary button--disabled" disabled&gt;Disabled&lt;/button&gt;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Поля ввода</h2>
+      <p>Описание компонента полей ввода.</p>
+      <div class="input-container">
+        <input type="text" class="input" placeholder="Введите текст">
+        <i class="fas fa-search input__icon"></i>
+      </div>
+      <div class="input-container">
+        <input type="text" class="input input--error" placeholder="Ошибка">
+        <span class="input__error-message">Поле обязательно для заполнения</span>
+      </div>
+      <pre><code>
+        &lt;div class="input-container"&gt;
+          &lt;input type="text" class="input" placeholder="Введите текст"&gt;
+          &lt;i class="fas fa-search input__icon"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="input-container"&gt;
+          &lt;input type="text" class="input input--error" placeholder="Ошибка"&gt;
+          &lt;span class="input__error-message"&gt;Поле обязательно для заполнения&lt;/span&gt;
+        &lt;/div&gt;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Карточки</h2>
+      <p>Описание компонента карточек.</p>
+      <div class="card">
+        <img src="" alt="Image" class="card__image">
+        <div class="card__content">
+          <h3 class="card__title">Заголовок</h3>
+          <p class="card__text">Текст карточки.</p>
+        </div>
+      </div>
+      <pre><code>
+        &lt;div class="card"&gt;
+          &lt;img src="image.jpg" alt="Image" class="card__image"&gt;
+          &lt;div class="card__content"&gt;
+            &lt;h3 class="card__title"&gt;Заголовок&lt;/h3&gt;
+            &lt;p class="card__text"&gt;Текст карточки.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Навигационное меню</h2>
+      <p>Описание навигационного меню.</p>
+      <nav class="navbar">
+        <div class="navbar__logo">Логотип</div>
+        <div class="navbar__toggle" onclick="toggleMenu()">&#9776;</div> <!-- Гамбургер-меню -->
+        <ul class="navbar__menu">
+          <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Главная</a></li>
+          <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">О нас</a></li>
+          <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Услуги</a></li>
+          <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Контакты</a></li>
+        </ul>
+      </nav>
+       <pre><code>
+        &lt;nav class="navbar"&gt;
+          &lt;div class="navbar__logo"&gt;Логотип&lt;/div&gt;
+          &lt;div class="navbar__toggle" onclick="toggleMenu()"&gt;&#9776;&lt;/div&gt;
+          &lt;ul class="navbar__menu"&gt;
+            &lt;li class="navbar__menu-item"&gt;&lt;a href="#" class="navbar__menu-link"&gt;Главная&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="navbar__menu-item"&gt;&lt;a href="#" class="navbar__menu-link"&gt;О нас&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="navbar__menu-item"&gt;&lt;a href="#" class="navbar__menu-link"&gt;Услуги&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="navbar__menu-item"&gt;&lt;a href="#" class="navbar__menu-link"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Контейнеры и сетки</h2>
+      <p>Описание контейнеров и сеток.</p>
+      <div class="container">
+        <h1>Заголовок</h1>
+        <p>Текст контента.</p>
+      </div>
+      <div class="container">
+        <div class="grid grid--3-columns">
+          <!-- Карточки -->
+          <div class="card">
+            <img src="" alt="Image" class="card__image">
+            <div class="card__content">
+              <h3 class="card__title">Заголовок 1</h3>
+              <p class="card__text">Текст.</p>
+            </div>
+          </div>
+          <!-- ... еще карточки -->
+        </div>
+      </div>
+      <pre><code>
+        &lt;div class="container"&gt;
+          &lt;h1&gt;Заголовок&lt;/h1&gt;
+          &lt;p&gt;Текст контента.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="container"&gt;
+          &lt;div class="grid grid--3-columns"&gt;
+            &lt;!-- Карточки --&gt;
+            &lt;div class="card"&gt;
+              &lt;img src="image1.jpg" alt="Image" class="card__image"&gt;
+              &lt;div class="card__content"&gt;
+                &lt;h3 class="card__title"&gt;Заголовок 1&lt;/h3&gt;
+                &lt;p class="card__text"&gt;Текст.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- ... еще карточки --&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </code></pre>
+    </section>
+    <!-- ... другие секции для каждого компонента -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UI Kit</p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('navbar--open');
+    }
+  </script>
+</body>
+</html>

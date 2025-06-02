@@ -1,0 +1,40 @@
+@import '../_variables';
+
+.input {
+  width: 100%;
+  padding: $input-padding-y $input-padding-x;
+  border: 1px solid $color-gray-light;
+  border-radius: $border-radius;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  box-sizing: border-box; /* Важно для корректной работы ширины */
+
+  &:focus {
+    border-color: $color-primary;
+    outline: none;
+    box-shadow: 0 0 0 2px $focus-color;
+  }
+
+  &--error {
+    border-color: $color-error;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $input-padding-x;
+    color: $color-gray-dark;
+  }
+
+  &__error-message {
+    color: $color-error;
+    font-size: $font-size-small;
+    margin-top: $spacing-small;
+    display: block;
+  }
+}
+
+.input-container { // Обёртка для иконки и поля ввода
+  position: relative;
+}
