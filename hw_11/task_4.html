@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Прогресс-бар</title>
+  <style>
+    #wrapper {
+      width: 400px;
+      border: 1px solid #ccc;
+      margin: 40px auto;
+      position: relative;
+      height: 30px;
+    }
+    #progress-bar {
+      background: #4caf50;
+      width: 0;
+      height: 100%;
+      transition: width 0.3s;
+    }
+    #status {
+      text-align: center;
+      margin-top: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="progress-bar"></div>
+  </div>
+  <div id="status">Начало…</div>
+
+  <script>
+    const bar   = document.getElementById('progress-bar');
+    const text  = document.getElementById('status');
+    const total = 5;
+    let   sec   = 0;
+
+    const timer = setInterval(() => {
+      sec += 1;
+      const percent = (sec / total) * 100;
+      bar.style.width = percent + '%';
+      text.textContent = `Выполнено: ${percent}%`;
+
+      if (sec === total) {
+        clearInterval(timer);
+        text.textContent = 'Готово!';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
