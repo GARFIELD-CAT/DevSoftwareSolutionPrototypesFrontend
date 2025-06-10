@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Мое приложение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="auth-status">
+            <button id="login-button">Войти</button>
+        </div>
+        <div id="network-status"></div>
+    </header>
+    <main>
+        <h1>Главная страница</h1>
+        <p>Содержимое страницы...</p>
+    </main>
+    <footer>
+      <button id="logout-button">Выйти</button>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(registration => console.log('Service Worker зарегистрирован:', registration))
+                .catch(error => console.error('Ошибка регистрации Service Worker:', error));
+        }
+    </script>
+</body>
+</html>
