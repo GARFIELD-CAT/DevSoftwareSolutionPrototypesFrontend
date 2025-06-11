@@ -12,7 +12,7 @@
 
 - Сначала нужно запустить сервер
 - Для этого переходим в папку backend
-- Устанавливаем `poetry pip install poetry`
+- Устанавливаем poetry `pip install poetry`
 - Устанавливаем зависимости `poetry install`
 - Запускаем сервер `python3 main.py`
 - Переходим в корневую папку и открываем файл index.html
